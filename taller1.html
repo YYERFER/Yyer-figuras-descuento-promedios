@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="div-header">
+            <h1>FIGURAS GEOMÉTRICAS</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Ir a inicio</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+
+        <section class="section-main">
+
+            <form action="">
+
+
+                <select name="figuras" id="selectFigura" class="selectMain" onchange="functionFigura()">
+                    <optgroup label="Calcular Área">
+                        <option value="cuadrado">Cuadrado</option>
+                        <option value="rectangulo">Rectángulo</option>
+                        <option value="triangulo_rectangulo">Triangulo Rectangulo</option>
+                        <option value="triangulo_isosceles">Triangulo Isósceles</option>
+                        <option value="circulo">Circulo</option>
+                    </optgroup>
+                    <optgroup label="Calcular Perímetro">
+                        <option value="perimetroCuadrado">Cuadrado</option>
+                        <option value="perimetroTrianguloEquilatero">Triangulo Equilatero</option>
+                        <option value="perimetroCirculo">Circulo</option>
+                    </optgroup>
+                </optgroup>
+                <optgroup label="Calcular Descuentos">
+                    <option value="descuento">Descuento de productos</option>
+                </optgroup>
+                <optgroup label="Calcular Promedio">
+                    <option value="promedioAritmetico">Promedio Aritmético</option>
+                    <option value="promedioGeometrico">Promedio Geométrico</option>
+                    <option value="promedioArmonico">Promedio Armónico</option>
+                </optgroup>
+                </select>
+            </form>
+        </section>
+
+        <!--       ----------------------    CUADRADO      ---------------------                  -->
+
+        <section id="section-cuadrado" class="sectionCuadrado">
+            <div class="div-main">
+                <h2>Calcular el Área de un Cuadrado</h2>
+                <p><b>El cuadrado &EmptySmallSquare;</b> es una figura geométrica caracterizada por ser un tipo de paralelogramo con cuatro lados de igual longitud y paralelos entre sí. Para calcular el área de un Cuadrado, tenemos la siguiente formula:</p>
+                <p><b>A= b x h</b></p>
+                <p>donde <b>A</b> es el área, <b>'b'</b> es la base y <b>'h'</b> la altura</p>
+                <p><b>"b=h"</b></p>
+
+                <form action="">
+
+                    <p style="color:rgb(168, 9, 9) ;"><b>Ingrese el Valor de un lado del Cuadrado:</b></p>
+
+                    <input type="text" id="valorCuadrado" size="5px" autofocus="autofocus">
+                    <button type="button" onclick="functionCuadrado()">Resultado</button>
+                    <button type="reset" onclick="functionLimpiarCuadrado()">Limpiar</button>
+                    <button type="reset" onclick="functionCuadradoImagen()">Imagen</button>
+
+                    <div id="limpiame" class="div-resultado">
+                        <p id="resultadotArea1" class="resultadoCuadrado"></p>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
+
+        <!--       ----------------------    RECTANGULO      ---------------------                  -->
+
+        <section id="section-rectangulo" class="sectionRectangulo">
+            <div class="div-main">
+                <h2>Calcular el Área de un Rectángulo</h2>
+                <p><b>El rectángulo &rect;</b> es un cuadrilátero, específicamente un paralelogramo, que tiene dos pares de lados de igual longitud. Para calcular el área de un Rectángulo, tenemos la siguiente formula:</p>
+                <p><b>A= b x h</b></p>
+                <p>donde <b>A</b> es el área, <b>'b'</b> es la base y <b>'h'</b> la altura</p>
+                <p><b>"b&NotEqual;h"</b></p>
+
+                <form action="">
+
+                    <p style="color:rgb(168, 9, 9) ;"><b>Ingrese los Valores:</b></p>
+
+                    <div class="contenedorTriangulo">
+                        <!--Esto es manipulado en CSS dejar como esta -->
+                        <label for="baseRectangulo">Base
+                            <input type="text" id="baseRectangulo" size="5px" autofocus="autofocus">
+                        </label>
+                        <label for="alturaRectangulo">Altura
+                            <input type="text" id="alturaRectangulo" size="5px">
+                        </label>
+                    </div>
+
+                    <button type="button" onclick="functionRectangulo()">Resultado</button>
+                    <button type="reset" onclick="functionLimpiarRectangulo()">Limpiar</button>
+                    <button type="reset" onclick="functionRectanguloImagen()">Imagen</button>
+
+                    <div id="limpiame" class="div-resultado">
+                        <p id="resultadotArea4" class="resultadoCuadrado"></p>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
+
+        <!--       ----------------------    TRIANGULO RECTANGULO       ---------------------                  -->
+
+        <section id="section-trianguloRectangulo" class="sectiontrianguloRectangulo">
+            <div class="div-main">
+                <h2>Calcular el Área de un Triangulo Rectángulo</h2>
+                <p>El <b>triángulo rectángulo &lltri; </b> es aquel que tiene un ángulo interior que es recto, es decir, mide 90º. Para calcular el área de un Triangulo Rectángulo se tiene la siguiente formula:</p>
+                <p><b>A=(b x h)/2</b></p>
+                <p>donde <b>A</b> es el área,<b>'b'</b> es la base y <b>'h'</b>' la altura</p>
+                <p><b>"b=h" ó "b&NotEqual;h"</b></p>
+
+                <form action="">
+
+                    <p style="color:rgb(168, 9, 9) ;"><b>Ingrese los Valores:</b></p>
+
+                    <div class="contenedorTriangulo">
+                        <label for="baseTrianguloRectangulo">Base
+                            <input type="text" id="baseTrianguloRectangulo" size="5px" autofocus="autofocus">
+                        </label>
+                        <label for="alturaTrianguloRectangulo">Altura
+                            <input type="text" id="alturaTrianguloRectangulo" size="5px">
+                        </label>
+                    </div>
+
+                    <button type="button" onclick="functionTrianguloRectangulo()">Resultado</button>
+                    <button type="reset" onclick="functionLimpiarTrianguloRectangulo()">Limpiar</button>
+                    <button type="reset" onclick="functionTrianguloRectanguloImagen()">Imagen</button>
+
+                    <div class="div-resultado">
+                        <p id="resultadotArea2" class="resultadoCuadrado"></p>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
+
+
+        <!--       ----------------------    TRIANGULO ISÓSCELES       ---------------------                  -->
+
+        <section id="section-trianguloIsosceles" class="sectiontrianguloIsosceles">
+            <div class="div-main">
+                <h2>Calcular el Área de un Triangulo Isósceles</h2>
+                <p>El <b>triángulo isósceles &xutri;</b> es aquel que tiene dos lados con la misma longitud. Para calcular su área se tiene la siguiente formula:</p>
+                <p><b>A= (b x h)/2 , donde h = &Sqrt; L<sup>2</sup> - (b/2)<sup>2</sup></b></p>
+                <p>donde <b>b</b> es la base, <b>h</b> la altura y <b>L</b> lado del triangulo.</p>
+                <p><b>L1 = L2</b></p>
+
+                <form action="">
+
+                    <p style="color:rgb(168, 9, 9) ;"><b>Ingrese los Valores:</b></p>
+
+                    <div class="contenedorTriangulo">
+                        <label for="baseTrianguloIsosceles">Base
+                            <input type="text" id="baseTrianguloIsosceles" size="5px">
+                        </label>
+                        <label for="ladoTrianguloIsosceles1">Lado 1
+                            <input type="text" id="ladoTrianguloIsosceles1" size="5px">
+                        </label>
+                        <label for="ladoTrianguloIsosceles2">Lado 2
+                            <input type="text" id="ladoTrianguloIsosceles2" size="5px">
+                        </label>
+                    </div>
+
+                    <button type="button" onclick="functionTrianguloIsosceles()">Resultado</button>
+                    <button type="reset" onclick="functionLimpiarIsosceles()">Limpiar</button>
+                    <button type="reset" onclick="functionTrianguloIsoscelesImagen()">Imagen</button>
+
+                    <div class="div-resultadoIsosceles">
+                        <p id="resultadotArea3" class="resultadoCuadrado"></p>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
+
+ <!--       ----------------------    CIRCULO      ---------------------                  -->
+
+        <section id="section-circulo" class="sectionCirculo">
+            <div class="div-main">
+                <h2>Calcular el Área de un Círculo</h2>
+                <p><b>El círculo &xcirc;</b> es una figura geométrica delimitada por una circunferencia. Para calcular el área de un Círculo, tenemos la siguiente formula:</p>
+                <p><b>A= &pi; x r<sup>2; </sup> ;  r > 0</b></p>
+                <p>donde <b>'&pi;'</b> es una constante de 3,141592 y <b>'r'</b> es el radio de la circunferencia</p>
+
+                <form action="">
+
+                    <p style="color:rgb(168, 9, 9) ;"><b>Ingrese el radio de la Circunferencia:</b></p>
+
+                    <input type="text" id="valorCirculo" size="5px" autofocus="autofocus">
+                    <button type="button" onclick="functionCirculo()">Resultado</button>
+                    <button type="reset" onclick="functionLimpiarCirculo()">Limpiar</button>
+                    <button type="reset" onclick="functionCirculoImagen()">Imagen</button>
+
+                    <div id="limpiame" class="div-resultado">
+                        <p id="resultadotArea5" class="resultadoCirculo"></p>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
+
+<!------------------------------- AQUI COMIENZA LOS PERIMETROS ---------------------------- -->
+
+ <!--       ----------------------    PERIMETRO CUADRADO      ---------------------                  -->
+
+ <section id="section-PerimetroCuadrado" class="sectionPerimetroCuadrado">
+    <div class="div-main">
+        <h2>Calcular el Perímetro de un Cuadrado</h2>
+        <p>El perímetro de un <b>Cuadrado &EmptySmallSquare;</b> es la suma de todos sus lados. Para su cáclculo tenemos la siguiente formula:</p>
+        <p><b>P = L+L+L+L &rArr;</b> simplificando quedaría <b>P= 4 x L </b></p>
+        <p>donde <b>P</b> es el perímetro, <b>'L'</b> es la longitud lado</p>
+
+        <form action="">
+
+            <p style="color:rgb(168, 9, 9) ;"><b>Ingrese el Valor de un lado del Cuadrado:</b></p>
+
+            <input type="text" id="valorPerimetroCuadrado" size="5px" autofocus="autofocus">
+            <button type="button" onclick="functionPerimetroCuadrado()">Resultado</button>
+            <button type="reset" onclick="functionLimpiarPerimetroCuadrado()">Limpiar</button>
+
+            <div id="limpiame" class="div-resultado">
+                <p id="resultadoPerimetroCuadrado" class="resultadoPerimetroCuadrado"></p>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+<!--       ----------------------    PERIMETRO TRIANGULO EQUILATERO      ---------------------                  -->
+
+<section id="section-PerimetroTrianguloEquilatero" class="sectionPerimetroTrianguloEquilatero">
+    <div class="div-main">
+        <h2>Calcular el Perímetro de un Triángulo Equilátero </h2>
+        <p>El <b>triángulo equilátero &xutri;</b> es aquel cuyos tres lados miden la misma longitud. Su <b>perímetro</b> es la suma de todos sus lados. Para su cáclculo tenemos la siguiente formula:</p>
+        <p><b>P = L+L+L &rArr;</b> simplificando quedaría <b>P= 3 x L </b></p>
+        <p>donde <b>P</b> es el perímetro, <b>'L'</b> es la longitud lado</p>
+
+        <form action="">
+
+            <p style="color:rgb(168, 9, 9) ;"><b>Ingrese el Valor de un lado del Triángulo:</b></p>
+
+            <input type="text" id="valorPerimetroTrianguloEquilatero" size="5px" autofocus="autofocus">
+            <button type="button" onclick="functionPerimetroTrianguloEquilatero()">Resultado</button>
+            <button type="reset" onclick="functionLimpiarPerimetroTrianguloEquilatero()">Limpiar</button>
+
+            <div id="limpiame" class="div-resultado">
+                <p id="resultadoPerimetroTrianguloEquilatero" class="resultadoPerimetroTrianguloEquilatero"></p>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+
+<!--       ----------------------   PERIMETRO DE UN  CIRCULO      ---------------------                  -->
+
+<section id="section-perimetroCirculo" class="sectionPerimetroCirculo">
+    <div class="div-main">
+        <h2>Calcular el Perímetro de un Círculo</h2>
+        <p><b>El círculo &xcirc;</b> es una figura geométrica delimitada por una circunferencia. Para calcular el Perímetro de un Círculo, se tiene la siguiente formula:</p>
+        <p><b>P= 2 x &pi; x r ;  r > 0 </b></p>
+        <p>donde <b>'&pi;'</b> es una constante de 3,141592 y <b>'r'</b> es el radio de la circunferencia</p>
+
+        <form action="">
+
+            <p style="color:rgb(168, 9, 9) ;"><b>Ingrese el radio de la Circunferencia:</b></p>
+
+            <input type="text" id="valorPerimetroCirculo" size="5px" autofocus="autofocus">
+            <button type="button" onclick="functionPerimetroCirculo()">Resultado</button>
+            <button type="reset" onclick="functionLimpiarPerimetroCirculo()">Limpiar</button>
+
+            <div id="limpiame" class="div-resultado">
+                <p id="resultadoPerimetroCirculo" class="resultadoPerimetroCirculo"></p>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+
+<!-- -----------------------------DESCUENTO DE PRODUCTOS ---------------------------------------------- -->
+<section id="section-descuento" class="sectionDescuento">
+    <div class="div-main">
+        <h2>Calcular el Descuento de Productos</h2>
+       
+        <div class="div-table">
+        <table>
+            <tr>
+                <th>Cod.</th>
+                <th>Descripcion</th>
+                <th>cant</th>
+                <th>P.Unit</th>
+                <th>Dscto</th>
+                <th>Importe</th>
+            </tr>
+            <tr>
+                <td><input type="text" class="cod" id="codlim"></td>
+                <td><input type="text" class="desc" id="codlim1"></td>
+                <td><input type="text" id="cant1" onblur="cant1(this)" class="cant"></td>
+                <td><input type="text" id="puni1" onblur="precio1(this)" ></td>
+                <td><input type="text" id="descuentoA" onblur="descuento1(this)"></td>
+                <td><input type="text" id="importe1"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="cod" id="codlimA"></td>
+                <td><input type="text" class="desc" id="codlimB"></td>
+                <td><input type="text" id="cant2" onblur="cant2(this)" class="cant"></td>
+                <td><input type="text" id="puni2" onblur="precio2(this)"></td>
+                <td><input type="text" id="descuentoB" onblur="descuento2(this)" ></td>
+                <td><input type="text" id="importe2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total">Total:</td>
+                <td><input type="text" id="total" ></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="div-btn">
+        <button type="button" class="btnTotal" onclick="functionTotal()">Total</button>
+        <button type="button" class="btnTotal" onclick="functionLimpiarBtn()">Limpiar</button>
+    </div>
+
+</section>
+
+
+<!------------------- INICIANDO CON CALCULOS DE LOS PROMEDIOS --------------------->
+
+<!--       ----------------------    PROMEDIO ARITMETICO      ---------------------                  -->
+
+<section id="section-Aritmetico" class="sectionAritmetico">
+    <div class="div-main">
+        <h2>Calcular el promedio Arimético</h2>
+
+        <p>El<b> promedio aritmético</b> o <b>Media Aritmética</b> se obtiene al dividir la suma de los datos entre el número de datos.</p>
+        <img src="./img/paritmetico.jpg" alt="">
+
+        <form action="">
+
+            <p style="color:rgb(168, 9, 9) ;"><b>Ingrese numeros enteros sin comas ni puntos</b></p>
+
+
+            <input type="text" id="valorAritmetico" class="nuumero" size="5px" autofocus="autofocus">
+            <button type="button" onclick="functionAritmetico()">Resultado</button>
+            <button type="reset" onclick="functionLimpiarAritmetico()">Limpiar</button>
+
+            <div id="limpiame" class="div-resultado">
+                <p id="resultadotAritmetico" class="resultadoAritmetico"></p>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+<!--       ----------------------    PROMEDIO GEOMÉTRICO      ---------------------                  -->
+
+<section id="section-Geometrico" class="sectionGeometrico">
+    <div class="div-main">
+        <h2>Calcular el promedio Geométrico</h2>
+
+        <p>El<b> Promedio Geométrico</b> o <b>Media Geométrica</b>  es otra alternativa para encontrar el valor promedio de un conjunto de números, solo que en vez de sumar los valores y dividirlos como normalmente se harías para calcular la media aritmética, primero tienes que multiplicarlos y luego calcular la raíz</p>
+        <img src="./img/mgeometrica.jpg" alt="">
+
+        <form action="">
+
+            <p style="color:rgb(168, 9, 9) ;"><b>Ingrese numeros enteros sin comas ni puntos</b></p>
+
+
+            <input type="text" id="valorGeometrico" class="nuumero" size="5px" autofocus="autofocus">
+            <button type="button" onclick="functionGeometrico()">Resultado</button>
+            <button type="reset" onclick="functionLimpiarGeometrico()">Limpiar</button>
+
+            <div id="limpiame" class="div-resultado">
+                <p id="resultadotGeometrico" class="resultadoGeometrico"></p>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+    </main>
+
+    <script src="js/js.js"></script>
+</body>
+
+</html>

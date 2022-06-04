@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: aqua;
+    font-family: sans-serif;
+
+}
+
+.div-header{
+    display: flex;
+    background-color: antiquewhite;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-shadow: 0px 0px 20px;
+    color: rgba(148, 41, 22, 0.747);
+    box-shadow: 0px 0px 10px;
+    
+}
+nav{
+    margin: 10px 0px 3% 20px;
+    font-size: 20px;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+nav li a{
+   
+    text-decoration: none;
+}
+.section-main{
+    margin-bottom: 20px;
+}
+section{
+    display: flex;
+    background-color: rgb(79, 245, 13);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0px 0px 20px;
+}
+h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 4px;
+    color: rgba(22, 1, 209, 0.644);
+}
+.div-main{
+    padding-top: 5px;
+  
+}
+p{
+    font-size: 25px;
+}
+
+input,select{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 6px;
+}
+button{
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 0px 0px 6px;
+}
+input:hover{
+    outline-color: rgb(255, 17, 0) ;
+}
+button:hover{
+    cursor: pointer;
+    color: rgb(7, 68, 63);
+    background-color: aquamarine;
+}
+.div-resultado{
+   
+    margin-bottom: 30px;
+}
+.div-resultado p{
+    display: flex;
+    background-color: azure;
+    width: 60%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px;
+}
+.div-resultadoIsosceles{
+   
+    display: flex;
+    background-color: azure;
+    width: 60%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px;
+}
+
+/* MANIPULANDO EL MENU */
+.selectMain{
+    width: 300px;
+    height: 50px;
+}
+
+/* ESTILOS PARA AREA TRIANGULO RECTANGULO */
+.contenedorTriangulo{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    gap: 10px;;
+   
+}
+.contenedorTriangulo input{
+    width: 100px;
+    width: auto;
+} 
+
+/* OCULTANDO LOS FRAMES */
+.sectiontrianguloRectangulo{
+    display: none;
+}
+.sectiontrianguloIsosceles{
+    display: none;
+}
+.sectionRectangulo{
+    display: none;
+}
+.sectionCirculo{
+    display: none;
+}
+.sectionPerimetroCuadrado{
+    display: none;
+}
+.sectionPerimetroTrianguloEquilatero{
+    display: none;
+}
+.sectionPerimetroCirculo{
+    display: none;
+}
+.sectionDescuento{
+    display: none;
+}
+.sectionAritmetico{
+    display: none;
+}
+.sectionGeometrico{
+    display: none;
+}
+/* APLICANDO ESTILO A LA TABLA DE DESCUENTO */
+.div-table{
+display: flex;
+/* margin: auto; */
+justify-content: center;
+align-items: center;
+/* padding: 0px; */
+
+}
+table{
+    /* margin: auto; */
+    
+    border-collapse: collapse;
+    border: 1px  black solid;
+}
+table input{
+    width: 90px;
+    border-radius:0px;
+    margin:0px;
+    /* padding: 0px; */
+}
+td,tr{
+    border-collapse: collapse;
+    border: 0px  black solid;
+}
+.cant{
+    width: 50px;
+}
+.desc{
+    width: 120px;
+}
+.cod{
+    width: 50px;
+}
+.total{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* FORMULARIO DE PROMEDIO ARITMETICO */
+
+img{
+    box-shadow: 0px 0px 20px;
+    margin: 15px 0px;;
+}
