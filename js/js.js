@@ -60,6 +60,20 @@ function functionLimpiarModa(){
     document.getElementById('valorModa').value = '';
 }
 
+function functionLimpiarVolumenCubo(){
+    document.getElementById('resultadoVolumenCubo').innerHTML = '';
+    document.getElementById('longitudVolumenCubo').value = '';
+    document.getElementById('alturaVolumenCubo').value = '';
+    document.getElementById('anchoVolumenCubo').value = '';
+}
+
+function functionLimpiarVolumenCilindro(){
+    document.getElementById('resultadoVolumenCilindro').innerHTML = '';
+    document.getElementById('radioVolumenCilindro').value = '';
+    document.getElementById('alturaVolumenCilindro').value = '';
+    
+}
+
 function functionLimpiarBtn(){
      document.getElementById('codlim').value='';
      document.getElementById('codlim1').value='';
@@ -105,6 +119,8 @@ function functionFigura(){
         document.getElementById('section-Aritmetico').style.display='none'
         document.getElementById('section-Geometrico').style.display='none'
         document.getElementById('section-Moda').style.display='none'
+        document.getElementById('section-volumenCubo').style.display='none'
+        document.getElementById('section-volumenCilindro').style.display='none'
 
 
         document.getElementById('section-cuadrado').style.display='block'
@@ -124,6 +140,8 @@ function functionFigura(){
             document.getElementById('section-Aritmetico').style.display='none'
             document.getElementById('section-Geometrico').style.display='none'
             document.getElementById('section-Moda').style.display='none'
+            document.getElementById('section-volumenCubo').style.display='none'
+            document.getElementById('section-volumenCilindro').style.display='none'
     
     
             document.getElementById('section-rectangulo').style.display='block'
@@ -143,6 +161,8 @@ function functionFigura(){
         document.getElementById('section-Aritmetico').style.display='none'
         document.getElementById('section-Geometrico').style.display='none'
         document.getElementById('section-Moda').style.display='none'
+        document.getElementById('section-volumenCubo').style.display='none'
+        document.getElementById('section-volumenCilindro').style.display='none'
         
 
 
@@ -164,6 +184,8 @@ function functionFigura(){
         document.getElementById('section-Aritmetico').style.display='none'
         document.getElementById('section-Geometrico').style.display='none'
         document.getElementById('section-Moda').style.display='none'
+        document.getElementById('section-volumenCubo').style.display='none'
+        document.getElementById('section-volumenCilindro').style.display='none'
 
 
         document.getElementById('section-trianguloIsosceles').style.display='block'
@@ -185,6 +207,8 @@ function functionFigura(){
         document.getElementById('section-Aritmetico').style.display='none'
         document.getElementById('section-Geometrico').style.display='none'
         document.getElementById('section-Moda').style.display='none'
+        document.getElementById('section-volumenCubo').style.display='none'
+        document.getElementById('section-volumenCilindro').style.display='none'
 
 
         document.getElementById('section-circulo').style.display='block'
@@ -204,6 +228,8 @@ function functionFigura(){
     document.getElementById('section-Aritmetico').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
     document.getElementById('section-Moda').style.display='none'
+    document.getElementById('section-volumenCubo').style.display='none'
+    document.getElementById('section-volumenCilindro').style.display='none'
 
 
     document.getElementById('section-PerimetroCuadrado').style.display='block'
@@ -223,6 +249,8 @@ function functionFigura(){
     document.getElementById('section-Aritmetico').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
     document.getElementById('section-Moda').style.display='none'
+    document.getElementById('section-volumenCubo').style.display='none'
+    document.getElementById('section-volumenCilindro').style.display='none'
 
 
     document.getElementById('section-PerimetroTrianguloEquilatero').style.display='block'
@@ -242,6 +270,8 @@ function functionFigura(){
     document.getElementById('section-Aritmetico').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
     document.getElementById('section-Moda').style.display='none'
+    document.getElementById('section-volumenCubo').style.display='none'
+    document.getElementById('section-volumenCilindro').style.display='none'
 
 
     document.getElementById('section-perimetroCirculo').style.display='block'
@@ -261,6 +291,8 @@ function functionFigura(){
     document.getElementById('section-Aritmetico').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
     document.getElementById('section-Moda').style.display='none'
+    document.getElementById('section-volumenCubo').style.display='none'
+    document.getElementById('section-volumenCilindro').style.display='none'
 
 
     document.getElementById('section-descuento').style.display='block'
@@ -278,6 +310,8 @@ function functionFigura(){
     document.getElementById('section-descuento').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
     document.getElementById('section-Moda').style.display='none'
+    document.getElementById('section-volumenCubo').style.display='none'
+    document.getElementById('section-volumenCilindro').style.display='none'
     
     
     document.getElementById('section-Aritmetico').style.display='block'
@@ -295,6 +329,8 @@ function functionFigura(){
     document.getElementById('section-descuento').style.display='none'
     document.getElementById('section-Aritmetico').style.display='none'
     document.getElementById('section-Moda').style.display='none'
+    document.getElementById('section-volumenCubo').style.display='none'
+    document.getElementById('section-volumenCilindro').style.display='none'
     
     document.getElementById('section-Geometrico').style.display='block'
 
@@ -311,8 +347,47 @@ function functionFigura(){
     document.getElementById('section-descuento').style.display='none'
     document.getElementById('section-Aritmetico').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
+    document.getElementById('section-volumenCubo').style.display='none'
+    document.getElementById('section-volumenCilindro').style.display='none'
+
     
     document.getElementById('section-Moda').style.display='block'
+
+}else if(index == 'volumenCubo'){
+
+    document.getElementById('section-trianguloRectangulo').style.display='none'
+    document.getElementById('section-trianguloIsosceles').style.display='none'
+    document.getElementById('section-rectangulo').style.display='none'
+    document.getElementById('section-cuadrado').style.display='none'
+    document.getElementById('section-PerimetroCuadrado').style.display='none'
+    document.getElementById('section-PerimetroTrianguloEquilatero').style.display='none'
+    document.getElementById('section-circulo').style.display='none'
+    document.getElementById('section-perimetroCirculo').style.display='none'
+    document.getElementById('section-descuento').style.display='none'
+    document.getElementById('section-Aritmetico').style.display='none'
+    document.getElementById('section-Geometrico').style.display='none'
+    document.getElementById('section-Moda').style.display='none'
+    document.getElementById('section-volumenCilindro').style.display='none'
+    
+    document.getElementById('section-volumenCubo').style.display='block'
+
+}else if(index == 'volumenCilindro'){
+
+    document.getElementById('section-trianguloRectangulo').style.display='none'
+    document.getElementById('section-trianguloIsosceles').style.display='none'
+    document.getElementById('section-rectangulo').style.display='none'
+    document.getElementById('section-cuadrado').style.display='none'
+    document.getElementById('section-PerimetroCuadrado').style.display='none'
+    document.getElementById('section-PerimetroTrianguloEquilatero').style.display='none'
+    document.getElementById('section-circulo').style.display='none'
+    document.getElementById('section-perimetroCirculo').style.display='none'
+    document.getElementById('section-descuento').style.display='none'
+    document.getElementById('section-Aritmetico').style.display='none'
+    document.getElementById('section-Geometrico').style.display='none'
+    document.getElementById('section-Moda').style.display='none'
+    document.getElementById('section-volumenCubo').style.display='none'
+    
+    document.getElementById('section-volumenCilindro').style.display='block'
 
 }
 
@@ -499,7 +574,7 @@ function functionTrianguloIsoscelesImagen(){
  // AREA DE UN CIRCULO
 function circulo(radio){
 
-    let valor = ((3.141592)*(Math.pow(radio,2)));
+    let valor = ((Math.PI)*(Math.pow(radio,2)));
 
     return Number.parseFloat(valor).toFixed(2);
 }
@@ -589,7 +664,7 @@ function functionPerimetroTrianguloEquilatero(){
 // PERIMETRO DE UN CIRCULO
 function perimetroCirculo(radio){
 
-    let valor = ((2)*(3.141592)*(radio));
+    let valor = ((2)*(Math.PI)*(radio));
 
     return Number.parseFloat(valor).toFixed(2);
 }
@@ -604,12 +679,73 @@ function functionPerimetroCirculo(){
 
     }else if(valor == ''){
         alert ('Debes ingresar un Valor Numérico');
-
+fgh
    } else{
     
         resultadoPerimetroCirculo.innerText =`El Perímetro de la Circunferencia es: ${perimetroCirculo(valor)}`;
    } 
 }
+
+                                // VOLUMENES
+
+// VOLUMEN DE UN CUBO
+
+function volumenCubo(a,b,c){
+    let valor = a*b*c
+    return Number.parseFloat(valor).toFixed(2);
+}
+
+
+
+function functionVolumenCubo(){
+    let longitud = document.getElementById('longitudVolumenCubo').value;
+    let ancho = document.getElementById('anchoVolumenCubo').value;
+    let altura = document.getElementById('alturaVolumenCubo').value;
+
+    if( isNaN(longitud) || isNaN(ancho) || isNaN(altura)){
+    
+        alert('Debes Ingresar Valores Numéricos');
+
+    }else if(longitud == '' || ancho == '' || altura == ''){
+        alert ('Debes ingresar un Valor Numérico');
+
+   } else{
+    
+        resultadoVolumenCubo.innerText =`El Volumen del Cubo es: ${volumenCubo(longitud,ancho,altura)}`;
+   } 
+
+}
+// VOLUMEN DE UN CILINDRO
+
+function volumenCilindro(r,h){
+
+    let valor = ((Math.PI)*(Math.pow(r,2))*h);
+
+    return Number.parseFloat(valor).toFixed(2);
+}
+
+
+
+function functionVolumenCilindro(){
+    let radio = document.getElementById('radioVolumenCilindro').value;
+    let altura = document.getElementById('alturaVolumenCilindro').value;
+    
+
+    if( isNaN(radio) || isNaN(altura)){
+    
+        alert('Debes Ingresar Valores Numéricos');
+
+    }else if(radio == '' || altura == ''){
+        alert('Debes ingresar un Valor Numérico');
+
+   } else{
+    
+        resultadoVolumenCilindro.innerText =`El Volumen del Cilindro es: ${volumenCilindro(radio,altura)}`;
+   } 
+
+}
+
+
 
 // FORMULARIO DE DESCUENTO
 

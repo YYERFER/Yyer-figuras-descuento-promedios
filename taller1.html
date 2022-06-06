@@ -44,6 +44,10 @@
                         <option value="perimetroTrianguloEquilatero">Triangulo Equilatero</option>
                         <option value="perimetroCirculo">Circulo</option>
                     </optgroup>
+                    <optgroup label="Calcular Volumen">
+                        <option value="volumenCubo">Cubo</option>
+                        <option value="volumenCilindro">Cilindro</option>
+                    </optgroup>
                 </optgroup>
                 <optgroup label="Calcular Descuentos">
                     <option value="descuento">Descuento de productos</option>
@@ -306,6 +310,88 @@
     </div>
 
 </section>
+
+<!------------------------------- AQUI COMIENZA LOS VOLUMENES ---------------------------- -->
+
+<!-- Volumen de un Cubo -->
+
+<section id="section-volumenCubo" class="sectionVolumenCubo">
+    <div class="div-main">
+        <h2>Calcular el Volumen de un Cubo</h2>
+        <p>Un<b> Cubo</b> es una figura sólida tridimensional, la cual tiene seis caras cuadradas. Para calcular el volumen, necesitamos conocer la dimensión de sus lados. Debido a que un cubo tiene todos sus lados con la misma longitud, se tiene la siguiente formula:</p>
+        <p><span style="color:rgb(138, 30, 226) ;"><b>Volumen = Longitud x Ancho x Altura</b></span></p>
+        <p><b>V = a x a x a </b></p>
+        
+        <img src="./img/volumen-cubo.jpg" width="200px" alt="">
+        <form action="">
+
+            <p style="color:rgb(168, 9, 9) ;"><b>Ingrese los datos correspondiente:</b></p>
+           
+            <div class="contenedorTriangulo">
+                <label for="longitudVolumenCubo">longitud
+                    <input type="text" id="longitudVolumenCubo" size="5px" autofocus="autofocus">
+                </label>
+                <label for="anchoVolumenCubo">Ancho
+                    <input type="text" id="anchoVolumenCubo" size="5px">
+                </label>
+                <label for="alturaVolumenCubo">Altura
+                    <input type="text" id="alturaVolumenCubo" size="5px">
+                </label>
+            </div>
+
+            <!-- <input type="text" id="valorPerimetroCirculo" size="5px" autofocus="autofocus"> -->
+            <button type="button" onclick="functionVolumenCubo()">Resultado</button>
+            <button type="reset" onclick="functionLimpiarVolumenCubo()">Limpiar</button>
+
+            <div id="limpiame" class="div-resultado">
+                <p id="resultadoVolumenCubo" class="resultadoVolumenCubo"></p>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+<!-- Volumen de un Cilindro -->
+
+<section id="section-volumenCilindro" class="sectionVolumenCilindro">
+    <div class="div-main">
+        <h2>Calcular el Volumen de un Cilindro</h2>
+        <p>El<b> Volumen</b> de un <b>Cilindro</b> con radio <b>r</b> es el área de la base <b>B</b> por la altura <b>h</b>, donde <b>'&pi;'</b> es una constante de 3,141592 y <b>'r'</b> es el radio de la circunferencia</p>
+       
+        
+        <img src="./img/volumen-cilindro.png" width="200px" alt="">
+        <form action="">
+
+            <p style="color:rgb(168, 9, 9) ;"><b>Ingrese los datos correspondiente:</b></p>
+           
+            <div class="contenedorTriangulo">
+                <label for="radioVolumenCilindro">Radio
+                    <input type="text" id="radioVolumenCilindro" size="5px" autofocus="autofocus">
+                </label>
+                <label for="alturaVolumenCilindro">Altura
+                    <input type="text" id="alturaVolumenCilindro" size="5px">
+                </label>
+            </div>
+
+            <!-- <input type="text" id="valorPerimetroCirculo" size="5px" autofocus="autofocus"> -->
+            <button type="button" onclick="functionVolumenCilindro()">Resultado</button>
+            <button type="reset" onclick="functionLimpiarVolumenCilindro()">Limpiar</button>
+
+            <div id="limpiame" class="div-resultado">
+                <p id="resultadoVolumenCilindro" class="resultadoVolumenCilindro"></p>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+
+
+
+
+
 
 
 <!-- -----------------------------DESCUENTO DE PRODUCTOS ---------------------------------------------- -->

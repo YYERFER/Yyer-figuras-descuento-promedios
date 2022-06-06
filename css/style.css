@@ -173,6 +173,12 @@ button:hover{
 .sectionModa{
     display: none;
 }
+.sectionVolumenCubo{
+    display: none;
+}
+.sectionVolumenCilindro{
+    display: none;
+}
 /* APLICANDO ESTILO A LA TABLA DE DESCUENTO */
 .div-table{
 display: flex;
