@@ -1,2 +1,2 @@
-# Yyer-figuras-descuento-promedios-Moda
+# Yyer-figuras-area-volumen-descuento-promedios-Moda
 Figuras Goemétricas (Area,perimetro), descuento, promedios
