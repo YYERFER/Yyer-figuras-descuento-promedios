@@ -55,6 +55,11 @@ function functionLimpiarGeometrico(){
     document.getElementById('valorGeometrico').value = '';
 }
 
+function functionLimpiarModa(){
+    document.getElementById('resultadoModa').innerHTML = '';
+    document.getElementById('valorModa').value = '';
+}
+
 function functionLimpiarBtn(){
      document.getElementById('codlim').value='';
      document.getElementById('codlim1').value='';
@@ -99,6 +104,7 @@ function functionFigura(){
         document.getElementById('section-descuento').style.display='none'
         document.getElementById('section-Aritmetico').style.display='none'
         document.getElementById('section-Geometrico').style.display='none'
+        document.getElementById('section-Moda').style.display='none'
 
 
         document.getElementById('section-cuadrado').style.display='block'
@@ -117,6 +123,7 @@ function functionFigura(){
             document.getElementById('section-descuento').style.display='none'
             document.getElementById('section-Aritmetico').style.display='none'
             document.getElementById('section-Geometrico').style.display='none'
+            document.getElementById('section-Moda').style.display='none'
     
     
             document.getElementById('section-rectangulo').style.display='block'
@@ -135,6 +142,7 @@ function functionFigura(){
         document.getElementById('section-descuento').style.display='none'
         document.getElementById('section-Aritmetico').style.display='none'
         document.getElementById('section-Geometrico').style.display='none'
+        document.getElementById('section-Moda').style.display='none'
         
 
 
@@ -155,6 +163,7 @@ function functionFigura(){
         document.getElementById('section-descuento').style.display='none'
         document.getElementById('section-Aritmetico').style.display='none'
         document.getElementById('section-Geometrico').style.display='none'
+        document.getElementById('section-Moda').style.display='none'
 
 
         document.getElementById('section-trianguloIsosceles').style.display='block'
@@ -175,6 +184,7 @@ function functionFigura(){
         document.getElementById('section-descuento').style.display='none'
         document.getElementById('section-Aritmetico').style.display='none'
         document.getElementById('section-Geometrico').style.display='none'
+        document.getElementById('section-Moda').style.display='none'
 
 
         document.getElementById('section-circulo').style.display='block'
@@ -193,6 +203,7 @@ function functionFigura(){
     document.getElementById('section-descuento').style.display='none'
     document.getElementById('section-Aritmetico').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
+    document.getElementById('section-Moda').style.display='none'
 
 
     document.getElementById('section-PerimetroCuadrado').style.display='block'
@@ -211,6 +222,7 @@ function functionFigura(){
     document.getElementById('section-descuento').style.display='none'
     document.getElementById('section-Aritmetico').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
+    document.getElementById('section-Moda').style.display='none'
 
 
     document.getElementById('section-PerimetroTrianguloEquilatero').style.display='block'
@@ -229,6 +241,7 @@ function functionFigura(){
     document.getElementById('section-descuento').style.display='none'
     document.getElementById('section-Aritmetico').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
+    document.getElementById('section-Moda').style.display='none'
 
 
     document.getElementById('section-perimetroCirculo').style.display='block'
@@ -247,6 +260,7 @@ function functionFigura(){
     document.getElementById('section-perimetroCirculo').style.display='none'
     document.getElementById('section-Aritmetico').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
+    document.getElementById('section-Moda').style.display='none'
 
 
     document.getElementById('section-descuento').style.display='block'
@@ -263,6 +277,7 @@ function functionFigura(){
     document.getElementById('section-perimetroCirculo').style.display='none'
     document.getElementById('section-descuento').style.display='none'
     document.getElementById('section-Geometrico').style.display='none'
+    document.getElementById('section-Moda').style.display='none'
     
     
     document.getElementById('section-Aritmetico').style.display='block'
@@ -279,8 +294,25 @@ function functionFigura(){
     document.getElementById('section-perimetroCirculo').style.display='none'
     document.getElementById('section-descuento').style.display='none'
     document.getElementById('section-Aritmetico').style.display='none'
+    document.getElementById('section-Moda').style.display='none'
     
     document.getElementById('section-Geometrico').style.display='block'
+
+}else if(index == 'moda'){
+
+    document.getElementById('section-trianguloRectangulo').style.display='none'
+    document.getElementById('section-trianguloIsosceles').style.display='none'
+    document.getElementById('section-rectangulo').style.display='none'
+    document.getElementById('section-cuadrado').style.display='none'
+    document.getElementById('section-PerimetroCuadrado').style.display='none'
+    document.getElementById('section-PerimetroTrianguloEquilatero').style.display='none'
+    document.getElementById('section-circulo').style.display='none'
+    document.getElementById('section-perimetroCirculo').style.display='none'
+    document.getElementById('section-descuento').style.display='none'
+    document.getElementById('section-Aritmetico').style.display='none'
+    document.getElementById('section-Geometrico').style.display='none'
+    
+    document.getElementById('section-Moda').style.display='block'
 
 }
 
@@ -764,5 +796,91 @@ function functionGeometrico(){
         }
 
         resultadotGeometrico.innerText =`La Multiplicación de los numeros es: ${mult}, el Número de cantidades es: ${cont} y su Promedio Geométrico es: ${Number.parseFloat(Math.pow(mult,1/cont)).toFixed(2)}`;
+    
+}
+
+//    CALCULAR LA MODA 
+
+
+function functionModa(){
+
+    let cont = 1;
+    let valor = document.getElementById('valorModa').value;
+
+    let arrOriginal =[];
+    let unicosElemen = [];
+    let elemenRepetidos = [];
+    let valorRepetido = [];
+  
+  
+        for(let i=0; i<valor.length; i++){
+         arrOriginal.push(valor[i]);
+        }
+        let ordenado = arrOriginal.sort();
+        //let arreglar=[1,1,2,5,5,6,6,6];
+       
+        for(let y=0; y<ordenado.length; y++){
+           if(ordenado[y+1] === ordenado[y]){
+                
+                valorRepetido.push(ordenado[y]);
+                cont++;
+
+           }else{
+            unicosElemen.push(ordenado[y]);
+            elemenRepetidos.push(cont);
+            cont = 1;
+           }
+        }
+           elemenRepetidos.reverse()
+           unicosElemen.reverse();
+        let mayor =0;
+        let unicoElement =0;
+        for(let z=0; z<elemenRepetidos.length; z++){
+            if(elemenRepetidos[z]>mayor){
+                  mayor = elemenRepetidos[z]
+                  unicoElement = unicosElemen[z];
+            }   
+        }
+
+        resultadoModa.innerText = ` La Moda es: ${unicoElement} y se repite ${mayor}`  
+
+        // let Mayor = mayor;
+        // let con = 1;
+        // for(let m=0; m<elemenRepetidos; m++){
+        //     if (mayor)
+        // }
+
+    //let repetido=[];
+
+        // for(let j=0; j<unicosElemen.length;j++){
+        //    if(unicosElemen[0] >= unicosElemen[j]){
+        //     resultadoModa.innerText = `${unicosElemen[j]} y ${elemenRepetidos[j]} \n`;
+        //    }
+        // } 
+
+        
+        
+
+        //elemenRepetidos.sort();
+
+        //for(let j=0; j<unicosElemen.length; j++){
+        //resultadoModa.innerText = `el valor ${unicosElemen[j]} se repite  ${elemenRepetidos[j]} veces '<br>'`;
+       // }
+
+        //  for(let z=0 ; z<elemenRepetidos.length; z++){
+        //      if(elemenRepetidos[z+1] > elemenRepetidos[z] ){
+        //         elemenRepetidos[z] = elemenRepetidos[z+1]
+        //      }
+        //      resultadoModa.innerText = elemenRepetidos[z] ;
+        //  }
+        //resultadoModa.innerText = elemenRepetidos.length ;
+
+
+
+
+       
+
+        
+        // resultadotGeometrico.innerText =`La Multiplicación de los numeros es: ${mult}, el Número de cantidades es: ${cont} y su Promedio Geométrico es: ${Number.parseFloat(Math.pow(mult,1/cont)).toFixed(2)}`;
     
 }

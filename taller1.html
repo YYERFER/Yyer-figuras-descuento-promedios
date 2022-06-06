@@ -48,10 +48,11 @@
                 <optgroup label="Calcular Descuentos">
                     <option value="descuento">Descuento de productos</option>
                 </optgroup>
-                <optgroup label="Calcular Promedio">
+                <optgroup label="Calcular Promedio-Moda">
                     <option value="promedioAritmetico">Promedio Aritmético</option>
                     <option value="promedioGeometrico">Promedio Geométrico</option>
-                    <option value="promedioArmonico">Promedio Armónico</option>
+                   <!-- <option value="promedioArmonico">Promedio Armónico</option> -->
+                    <option value="moda">Moda</option>
                 </optgroup>
                 </select>
             </form>
@@ -74,7 +75,7 @@
                     <input type="text" id="valorCuadrado" size="5px" autofocus="autofocus">
                     <button type="button" onclick="functionCuadrado()">Resultado</button>
                     <button type="reset" onclick="functionLimpiarCuadrado()">Limpiar</button>
-                    <button type="reset" onclick="functionCuadradoImagen()">Imagen</button>
+                    <button type="button" onclick="functionCuadradoImagen()">Imagen</button>
 
                     <div id="limpiame" class="div-resultado">
                         <p id="resultadotArea1" class="resultadoCuadrado"></p>
@@ -111,7 +112,7 @@
 
                     <button type="button" onclick="functionRectangulo()">Resultado</button>
                     <button type="reset" onclick="functionLimpiarRectangulo()">Limpiar</button>
-                    <button type="reset" onclick="functionRectanguloImagen()">Imagen</button>
+                    <button type="button" onclick="functionRectanguloImagen()">Imagen</button>
 
                     <div id="limpiame" class="div-resultado">
                         <p id="resultadotArea4" class="resultadoCuadrado"></p>
@@ -147,7 +148,7 @@
 
                     <button type="button" onclick="functionTrianguloRectangulo()">Resultado</button>
                     <button type="reset" onclick="functionLimpiarTrianguloRectangulo()">Limpiar</button>
-                    <button type="reset" onclick="functionTrianguloRectanguloImagen()">Imagen</button>
+                    <button type="button" onclick="functionTrianguloRectanguloImagen()">Imagen</button>
 
                     <div class="div-resultado">
                         <p id="resultadotArea2" class="resultadoCuadrado"></p>
@@ -187,7 +188,7 @@
 
                     <button type="button" onclick="functionTrianguloIsosceles()">Resultado</button>
                     <button type="reset" onclick="functionLimpiarIsosceles()">Limpiar</button>
-                    <button type="reset" onclick="functionTrianguloIsoscelesImagen()">Imagen</button>
+                    <button type="button" onclick="functionTrianguloIsoscelesImagen()">Imagen</button>
 
                     <div class="div-resultadoIsosceles">
                         <p id="resultadotArea3" class="resultadoCuadrado"></p>
@@ -214,7 +215,7 @@
                     <input type="text" id="valorCirculo" size="5px" autofocus="autofocus">
                     <button type="button" onclick="functionCirculo()">Resultado</button>
                     <button type="reset" onclick="functionLimpiarCirculo()">Limpiar</button>
-                    <button type="reset" onclick="functionCirculoImagen()">Imagen</button>
+                    <button type="button" onclick="functionCirculoImagen()">Imagen</button>
 
                     <div id="limpiame" class="div-resultado">
                         <p id="resultadotArea5" class="resultadoCirculo"></p>
@@ -412,6 +413,37 @@
     </div>
 
 </section>
+
+<!------------------- OTROS CONCEPTOS--------------------->
+
+<!--       ----------------------    MODA      ---------------------                  -->
+
+<section id="section-Moda" class="sectionModa">
+    <div class="div-main">
+        <h2>Calcular La Moda</h2>
+
+        <p>la<b> Moda</b> es el valor que tiene mayor frecuencia absoluta. Se representa por Mo..</p>
+        <img src="./img/Ejemplo-de-moda.jpg" alt="">
+
+        <form action="">
+
+            <p style="color:rgb(168, 9, 9) ;"><b>Ingrese numeros enteros sin comas ni puntos</b></p>
+
+
+            <input type="text" id="valorModa" class="numero" size="5px" autofocus="autofocus">
+            <button type="button" onclick="functionModa()">Resultado</button>
+            <button type="reset" onclick="functionLimpiarModa()">Limpiar</button>
+
+            <div id="limpiame" class="div-resultado">
+                <p id="resultadoModa" class="resultadoModa"></p>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+
 
     </main>
 
